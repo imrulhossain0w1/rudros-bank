@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudros Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-area">
+        <h2 class="text-center p-5">Welcome to Rudros Bank</h2>
+        <div class="submit-area">
+            <h4>Login</h4>
+            <input type="text" class="form-control" placeholder="Username">
+            <br>
+            <input type="password" class="form-control" placeholder="Password">
+            <br>
+            <button id="login-btn" class="btn btn-success">Login</button>
+        </div>
+    </div>
+    <div id="admin-panel">
+        <div class="row panel-area">
+            <div class="col-md-4">
+                <div class="status bg-primary">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="status bg-warning">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="status bg-success">
+                    <h5>Balance</h5>
+                    <h2>$1240</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row panel-area">
+            <div class="col-md-6">
+                <div class="input-value">
+                    <h4>Deposit</h4>
+                    <input type="text" class="form-control" placeholder="$ amount you want to Deposit">
+                    <br>
+                    <button class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-value">
+                    <h4>Withdraw</h4>
+                    <input type="text" class="form-control" placeholder="$ amount you want to Withdraw">
+                    <br>
+                    <button class="btn btn-success">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const loginBtn = document.getElementById("login-btn");
+        loginBtn.addEventListener("click", function(){
+            const logInArea = document.getElementById("login-area");
+            logInArea.style.display = "none";
+            const adminPanel = document.getElementById("admin-panel");
+            adminPanel.style.display = "block"
+        })
+    </script>
+</body>
+</html>
